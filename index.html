@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="icon" href="/icon-192.png" />
+    <!-- All assets are at repo root -->
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icon-192.png" />
     <meta name="theme-color" content="#000000">
     <title>HoodBook Mini</title>
     <style>
@@ -42,11 +43,12 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- IMPORTANT: import your root-level file -->
+    <script type="module" src="./main.jsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
+          navigator.serviceWorker.register('./sw.js');
         });
       }
     </script>
